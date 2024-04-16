@@ -83,6 +83,35 @@
         }
     });
 
+    function animateValue(id, start, end, duration) {
+        var obj = document.getElementById(id);
+        var range = end - start;
+        var current = start;
+        var increment = end > start ? 1 : -1;
+        var stepTime = Math.abs(Math.floor(duration / range));
+        var timer = setInterval(function() {
+          current += increment;
+          obj.innerHTML = "<span class='plus-sign'>+</span>" + current;
+          if (current == end) {
+            clearInterval(timer);
+          }
+        }, stepTime);
+      }
+    
+      // Defina os valores finais para suas estatísticas
+      var finalValues = {
+        "years": 7,
+        "families": 118,
+        "partners": 20
+      };
+    
+      // Defina a duração da animação em milissegundos
+      var duration = 2000;
+    
+      // Inicie a animação para cada estatística
+      Object.keys(finalValues).forEach(function(key) {
+        animateValue(key, 0, finalValues[key], duration);
+      });
 
     // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({

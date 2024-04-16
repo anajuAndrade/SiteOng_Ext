@@ -255,7 +255,7 @@
 
 /*** Products ***/
 .product {
-    background: linear-gradient(rgba(136, 180, 78, .1), rgba(136, 180, 78, .1)), url(../img/product-bg.png) left bottom no-repeat;
+    background: linear-gradient(rgba(136, 180, 78, .1), rgba(136, 180, 78, .1)), left bottom no-repeat;
     background-size: auto;
 }
 
@@ -420,7 +420,7 @@
 
 /*** Testimonial ***/
 .testimonial {
-    background: linear-gradient(rgba(136, 180, 78, .85), rgba(136, 180, 78, .85)), url(../img/testimonial-bg.jpg) center center no-repeat;
+    background: linear-gradient(rgba(136, 180, 78, .1), rgba(136, 180, 78, .1)), left bottom no-repeat;
     background-size: cover;
 }
 
@@ -429,7 +429,7 @@
     max-width: 600px;
     text-align: center;
     background: #FFFFFF;
-    border: 30px solid var(--primary);
+    border: 30px solid var(--primary); /* borda verde */
 }
 
 .testimonial-item img {
@@ -503,4 +503,43 @@
 
 .copyright a:hover {
     color: #FFFFFF !important;
+}
+
+.tamanho{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+
+.align{
+    text-align: center;
+}
+ .stats-container {
+    text-align: center;
+    margin-top: 200px;
+    margin-right: 150px; 
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+  }
+  .stat-item {
+    margin: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .stat-label {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  .plus-sign {
+    font-size: 35px;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+
+.estatistica{
+    background-image: url(../img/Pequenos-Guerreiros-3.jpg)
 }
