@@ -83,36 +83,50 @@
         }
     });
 
+    var animationStarted = false;
+
+    window.addEventListener('scroll', function() {
+        var element = document.querySelector('.estatistica');
+        var position = element.getBoundingClientRect();
+    
+        // Se a parte relevante da página estiver visível e a animação ainda não foi iniciada
+        if (position.top < window.innerHeight && position.bottom >= 0 && !animationStarted) {
+            // Iniciar a animação
+            animateValue("years", 0, 7, 2000); // Ajuste o terceiro parâmetro para uma duração maior
+            animateValue("families", 0, 118, 2000); // Deixe a duração padrão para o segundo
+            animateValue("partners", 0, 20, 2000); // Ajuste o terceiro parâmetro para uma duração maior
+    
+            // Definir a variável de controle como true para evitar reiniciar a animação
+            animationStarted = true;
+        }
+    });
+    
     function animateValue(id, start, end, duration) {
         var obj = document.getElementById(id);
         var range = end - start;
         var current = start;
-        var increment = end > start ? 1 : -1;
-        var stepTime = Math.abs(Math.floor(duration / range));
-        var timer = setInterval(function() {
-          current += increment;
-          obj.innerHTML = "<span class='plus-sign'>+</span>" + current;
-          if (current == end) {
-            clearInterval(timer);
-          }
-        }, stepTime);
-      }
+        var startTime = null;
     
-      // Defina os valores finais para suas estatísticas
-      var finalValues = {
-        "years": 7,
-        "families": 118,
-        "partners": 20
-      };
+        function updateNumber(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var progress = timestamp - startTime;
+            var increment = Math.ceil((range * progress) / duration);
+            current = start + increment;
     
-      // Defina a duração da animação em milissegundos
-      var duration = 2000;
+            obj.innerHTML = "<span class='plus-sign'>+</span>" + current;
     
-      // Inicie a animação para cada estatística
-      Object.keys(finalValues).forEach(function(key) {
-        animateValue(key, 0, finalValues[key], duration);
-      });
-
+            if (progress < duration) {
+                requestAnimationFrame(updateNumber);
+            } else {
+                obj.innerHTML = "<span class='plus-sign'>+</span>" + end;
+            }
+        }
+    
+        requestAnimationFrame(updateNumber);
+    }
+    
+    
+  
     // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,

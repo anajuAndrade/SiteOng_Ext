@@ -514,32 +514,40 @@
 .align{
     text-align: center;
 }
- .stats-container {
-    text-align: center;
-    margin-top: 200px;
-    margin-right: 150px; 
-  }
-  .stats-row {
+
+.estatistica {
+    background-image: url(../img/Pequenos-Guerreiros-3.jpg);
+    background-position: center; 
+    height: 50vh; 
+}
+
+.stats-row {
     display: flex;
     justify-content: center;
-  }
-  .stat-item {
+    align-items: center; 
+    height: 100%; 
+}
+
+.stats-container {
+    text-align: center;
+    margin-right: 20px; /* Espaçamento entre os contadores e as palavras */
+}
+
+.stat-item {
     margin: 20px;
     font-size: 50px;
     font-weight: bold;
     color: #ffffff;
-  }
-  .stat-label {
+}
+
+.stat-label {
     font-size: 18px;
     color: #ffffff;
     margin-top: 10px;
-  }
-  .plus-sign {
+}
+
+.plus-sign {
     font-size: 35px;
     color: #ffffff;
     margin-right: 10px;
-  }
-
-.estatistica{
-    background-image: url(../img/Pequenos-Guerreiros-3.jpg)
 }
