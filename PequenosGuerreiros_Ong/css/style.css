@@ -390,6 +390,7 @@
 /*** Store ***/
 .store-item .store-overlay {
     position: absolute;
+    min-height: 500px; 
     top: 0;
     left: 0;
     width: 100%;
@@ -405,6 +406,12 @@
 
 .store-item:hover .store-overlay {
     opacity: 1;
+}
+
+.store-item img {
+    height: 300px; /* Defina a altura desejada */
+    width: 100%; /* Ajusta a largura para ocupar todo o contêiner */
+    object-fit: cover; /* Redimensiona a imagem para cobrir todo o espaço sem distorção */
 }
 
 
