@@ -409,7 +409,7 @@
 }
 
 .store-item img {
-    height: 300px; /* Defina a altura desejada */
+    height: 100px; /* Defina a altura desejada */
     width: 100%; /* Ajusta a largura para ocupar todo o contêiner */
     object-fit: cover; /* Redimensiona a imagem para cobrir todo o espaço sem distorção */
 }
@@ -557,4 +557,23 @@
     font-size: 35px;
     color: #ffffff;
     margin-right: 10px;
+}
+/*Parceiros*/
+
+.parceiros-item img {
+    height: 60%; /* Defina a altura desejada */
+    width: 70%; /* Ajusta a largura para ocupar todo o contêiner */
+    object-fit: contain;
+}
+/* Sobre nos*/
+
+.colorp{
+    font-style: italic;
+    color: #0dcaf0;
+    
+}
+.acoes-img{
+    display: flexbox;
+    height: auto;
+    width: 60%;
 }
