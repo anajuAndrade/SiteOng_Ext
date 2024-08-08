@@ -409,7 +409,7 @@
 }
 
 .store-item img {
-    height: 100px; /* Defina a altura desejada */
+    height: 300px; /* Defina a altura desejada */
     width: 100%; /* Ajusta a largura para ocupar todo o contêiner */
     object-fit: cover; /* Redimensiona a imagem para cobrir todo o espaço sem distorção */
 }
