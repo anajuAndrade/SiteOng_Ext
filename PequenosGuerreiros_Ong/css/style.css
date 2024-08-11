@@ -601,3 +601,20 @@
 .mvv-valores{
     text-align: left;
 }
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-container img {
+    max-width: 50%;
+    max-height: 50%;
+}
+.carouselimg img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    display: block;
+}
