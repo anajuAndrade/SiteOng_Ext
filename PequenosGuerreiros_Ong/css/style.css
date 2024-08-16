@@ -601,6 +601,11 @@
 .mvv-valores{
     text-align: left;
 }
+.container2 img{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .photo-container {
     display: flex;
