@@ -575,7 +575,6 @@
 .acoes{
     display: flexbox;
     justify-content: space-between;
-    flex-wrap: nowrap;
 }
 .circle{
     img{
